@@ -1,0 +1,359 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color:rgb(228, 228, 228);
+    background-color: rgb(17, 16, 16);
+    font-family: 'Victor Mono', monospace;  }
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width:98%;
+    height: auto;
+    margin: 0 auto; /* This will center the container */
+    max-width: 82vw;
+}
+
+.card{
+    display: flex;
+    width: 92%;
+    height: 60vh;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 2vh 1vh;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    padding: 1vh;
+}
+
+/* .card-gallery{
+    display: flex;
+    width: 92%;
+    height: auto;
+    max-height: 60%;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 1vh 1vh;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    padding: 1vh;
+} */
+
+/* #paintings {
+    height: auto;
+    max-height: 60%;
+    width: auto;
+    max-width: 40%;
+} */
+
+
+
+
+
+
+.gall {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    max-width: 1600px; /* Sets the maximum width of the div */
+    margin: auto; /* Centers the div when the screen is wider than 1600px */
+}
+
+p.card-price {
+    font-size: 1.3rem;
+}
+
+.card-gallery {
+    flex-basis: 45%; /* Sets the base size for each card */
+    margin: 1.5vh;
+    background-color: rgb(30, 30, 30);
+    border-radius: 5px;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-height: 60%;
+}
+
+/* Replace #paintings with .paintings if you change it to class in HTML */
+#paintings {
+    height: auto;
+    max-height: 60%;
+    width: auto;
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+.imgs-portfolio {
+    position: relative;
+    width: 100%;
+    padding-top: 75%; /* This decides the aspect ratio */
+    overflow: hidden;
+}
+
+.img-bio {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 100%;
+    max-width: 100%;
+}
+
+
+.card-title{
+    font-weight: 300;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: end;
+    width: 92%;
+    margin: 0 auto;
+}
+
+.int-txt{
+    font-weight: 200;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: start;
+    width: 92%;
+    font-weight: 400;
+}
+
+.txt-devider-contacts{
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.empty-space{
+    flex-grow:6;
+    display: flex;
+
+}
+
+
+.interests-list{
+    flex-grow: 1;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+}
+
+
+
+
+#interests{
+    font-weight: 400;
+    color: rgb(162, 162, 162);
+    margin-bottom: 1vh;
+}
+
+#contact{
+    flex-direction: row;
+}
+
+#first-card,
+#contact{
+    background-color: rgb(17, 16, 16);
+}
+
+.img-bio{
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.img-projects{
+    width: 72%;
+    height: auto;
+}
+
+.card-main-txt{
+    font-size: 0.9rem;
+}
+
+#card-price{
+    font-size: 1.9rem;
+}
+
+
+.subtitle{
+    font-size: 0.85rem;
+    color: rgb(162, 162, 162);
+}
+
+.img-projects-2{
+    display: flex;
+    width:60%;
+    margin-left: 1vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgs-portfolio{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 82%;
+    margin: 0 auto;
+
+}
+
+.img-skills{
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.img-2-fix{
+    display: flex;
+    align-items: center;
+    background-color: inherit;
+
+}
+
+.imgs{ 
+    display: flex;
+    flex-direction: row;
+    width: 92%;
+    margin: 0 auto;
+    align-items: end;
+    justify-content: end;
+}
+
+
+.main-card-main-txt{
+    display: flex;
+    width: 92%;
+    margin: 0 auto 15% auto;
+    flex-direction: column;
+    
+}
+
+
+
+.card-footer{
+    display: flex;
+    width: 92%;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.card > div {
+    background-color: inherit;
+}
+
+
+
+.card-gallery * { /* This targets all children of .card-gallery */
+    background-color: inherit;
+}
+
+
+
+.card-gallery > div {
+    background-color: inherit;
+}
+
+
+.card-gallery p> div {
+    background-color: inherit;
+}
+
+
+.card h1,
+.card h2,
+.card img,
+.card p {
+    background-color: inherit;
+}
+
+.main-title{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 92%;
+    font-size: 2.3rem;
+    margin: 5% auto 15% auto;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    .card-gallery {
+        flex-basis: 100%;
+    }
+    .gall {
+        max-width: 100%;
+    }
+    .imgs-portfolio, .img-bio, .img-projects, .img-projects-2, .img-skills {
+        width: 100%;
+    }
+    .card-title, .int-txt, .txt-devider-contacts, .empty-space, .interests-list, .imgs, .main-card-main-txt, .card-footer {
+        width: 100%;
+        margin: 0;
+    }
+    .card-main-txt, .subtitle {
+        font-size: smaller;
+    }
+    .main-title {
+        font-size: 1.5rem;
+        margin: 10% auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

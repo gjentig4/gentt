@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Random Element Picker for Teams</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function updateSliderValue(value) {
+            document.getElementById('sliderValue').textContent = value;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <img class="logo" src="{{ url_for('static', filename='images/Logo.svg') }}" alt="Logo" class="logo">
+    </header>
+    <div class="title-form-container">
+        <h1 class="title">Random Champ Picker</h1>
+        <div class="llig-form"><form method="post">
+            <label class="llig-label"for="num_elements">Number of champs per team:</label>
+            <div class="llig-slider-div"><input type="range" id="num_elements" name="num_elements" min="1" max="7" value="1" oninput="updateSliderValue(this.value)">
+            <span id="sliderValue">1</span></div>
+            <div class="reroll-btn"><button id="reroll-btn2" type="submit">Reroll</button>
+        </div></div>
+        </form>
+    </div>
+    <div class="container">
+        <div class="team">
+            <h2 class="h2-team">Team 1</h2>
+            <ul>
+                {% for element in team1_elements %}
+                <li class="li-llig">{{ element }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="team">
+            <h2 class="h2-team">Team 2</h2>
+            <ul>
+                {% for element in team2_elements %}
+                <li class="li-llig">{{ element }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+

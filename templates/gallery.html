@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='portfolio.css') }}">
+</head>
+<body>
+<div class="gall">
+    <div id="main-card" class="container">
+        <div class="card" id="first-card">
+            <h1 class="main-title">GENTT</h1>
+            <div class="main-card-main-txt"><p>Licensed Art Distributor</p><p> with Worldwide shipping</p></div>
+            <div class="card-footer"><p>Helsinki, </p><p class="subtitle"> Finland</p></div>
+        </div>
+
+    </div> 
+
+    {% for item in gallery_data %}
+        <div id="paintings" class="card-gallery">
+            
+                <h2 class="card-title">{{ item[1] }}</h2> <!-- Name -->
+                <div class="imgs-portfolio">
+                    <img class="img-bio" src="{{ url_for('static', filename='images/' + item[0]|string + '.jpg') }}" alt="{{ item[1] }}" loading="lazy">
+                </div>
+                <div>
+                    <p class="card-price">{{ item[2] }}€</p> <!-- Price -->
+                    <p class="subtitle">{{ item[3] }} , {{ item[4] }} by {{ item[5] }}</p> <!-- Size, Technique, Artist -->
+                </div>
+            
+        </div>
+        {% endfor %}
+    
+
+</div>
+
+</div>
+</body> 
+</html>

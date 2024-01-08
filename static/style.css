@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    color: #1F1D17;
+    background-color: #E6E0D6;
+    font-family: 'Raleway', sans-serif;
+  }
+
+.title{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.llig-form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1rem;
+}
+
+.llig-label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.llig-slider-div{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+#sliderValue{
+    font-size: 1.2rem;
+    margin-top: -0.24rem;
+}
+
+h2{
+    font-weight: 500;
+}
+
+.reroll-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+#reroll-btn2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    box-shadow: none;
+    font-size: 1.2rem;
+    border-style: solid;
+    background-color: #353025;
+    color: #E6E0D6;
+    box-shadow: 3px 3px 5px 0 rgba(31, 29, 23, 0.4);
+    border: none;
+    letter-spacing: 0.03rem;
+    font-weight: 400;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+#reroll-btn2:hover {
+    background-color: #1F1D17; /* Slightly darker shade */
+    color: #E6E0D6; /* Slightly lighter text color */
+    transform: translate(-1px, -1px); /* Move up and left */
+    box-shadow: 5px 5px 8px 0 rgba(31, 29, 23, 0.4); /* Slightly larger shadow */
+}
+
+header{
+    display: flex;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 2rem 1rem 2rem;
+    justify-content: center;
+    align-items: start;
+    margin: 1rem;
+}
+
+.team{
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.h2-team{
+    padding-bottom: 1rem;
+}
+
+.li-llig{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0.7rem;
+}
+
+input[type=range]::-moz-range-track {
+    background: #ddd;
+    height: 4px;
+    border-radius: 2px;
+}
+/* Styles for the slider itself */
+input[type=range] {
+    -webkit-appearance: none; /* Removes default webkit styles */
+    width: 75%; /* Full width - use with caution depending on your specific layout */
+    margin: 10px 0; /* Margin for spacing */
+    background: transparent; /* Removes default background */
+    /* Increased padding for a larger clickable area */
+     padding: 6px 0; /* Adjust the vertical padding as needed */
+     /* Use negative margin to compensate for the added padding */
+    margin: -6px 0; /* Adjust the vertical margin to match the padding */
+}
+
+/* Styles for the slider thumb */
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    margin-top: -0.52rem;
+    appearance: none;
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background: #353025; /* Thumb color */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%; /* Rounded corners for the thumb */
+    transition: left 0.2s ease;
+}
+
+input[type=range]::-moz-range-thumb {
+    margin-top: -0.52rem;
+    width: 20px; /* Width of the thumb */
+    height: 20px; /* Height of the thumb */
+    background: #353025; /* Thumb color */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%; /* Rounded corners for the thumb */
+    transition: left 0.2s ease;
+}
+
+
+/* Styles for the slider track */
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    background: #7d2f2f; /* Track color */
+    border-radius: 8px; /* Rounded corners for the track */
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8px;
+    background: #ddd; /* Track color */
+    border-radius: 4px; /* Rounded corners for the track */
+}
