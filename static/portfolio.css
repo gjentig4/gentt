@@ -66,6 +66,7 @@
 
 p.card-price {
     font-size: 1.3rem;
+    margin-top: 0.5rem;
 }
 
 .card-gallery {
@@ -110,18 +111,18 @@ p.card-price {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 98%;
+    max-width: 98%;
 }
 
 
 .card-title{
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 400;
+    font-size: 1.5rem;
     display: flex;
     justify-content: end;
     width: 92%;
-    margin: 0 auto;
+    margin: 0 auto 1.5vh auto;
 }
 
 .int-txt{
@@ -173,11 +174,11 @@ p.card-price {
     background-color: rgb(17, 16, 16);
 }
 
-.img-bio{
+/* .img-bio{
     width: 60%;
     height: auto;
     margin: 0 auto;
-}
+} */
 
 .img-projects{
     width: 72%;
@@ -196,6 +197,8 @@ p.card-price {
 .subtitle{
     font-size: 0.85rem;
     color: rgb(162, 162, 162);
+    margin-top: 0.2rem;
+
 }
 
 .img-projects-2{
@@ -325,21 +328,20 @@ p.card-price {
         max-width: 100%;
     }
     .imgs-portfolio, .img-bio, .img-projects, .img-projects-2, .img-skills {
-        width: 100%;
+        max-width: 100%;
     }
     .card-title, .int-txt, .txt-devider-contacts, .empty-space, .interests-list, .imgs, .main-card-main-txt, .card-footer {
         width: 100%;
-        margin: 0;
+        margin-bottom: 0.8vh;
     }
     .card-main-txt, .subtitle {
         font-size: smaller;
     }
     .main-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin: 10% auto;
     }
 }
-
 
 
 

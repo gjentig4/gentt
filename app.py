@@ -12,6 +12,9 @@ def get_gallery_data():
     cursor.execute("SELECT id, name, price, size, technique, artist FROM artworks")
     data = cursor.fetchall()
 
+    # Convert price to integer
+    data = [(id, name, int(price), size, technique, artist) for id, name, price, size, technique, artist in data]
+
     # Close the database connection
     conn.close()
 
@@ -26,11 +29,16 @@ def gallery():
     # Fetch gallery data
     gallery_data = get_gallery_data()
 
-    # If you have a specific order of IDs, sort the data accordingly
-    #example_order = [11]  # replace with your actual order
-    #gallery_data = sorted(gallery_data, key=lambda x: example_order.index(x[0]))
+    # Define the desired IDs
+    desired_ids = [18, 20, 6, 32, 4, 26, 13, 17]
 
-    return render_template('gallery.html', gallery_data=gallery_data)
+    # Convert desired IDs to the new filename format (e.g., "11_28.jpg")
+    desired_filenames = [f"{id}_28.jpg" for id in desired_ids]
+
+    # Filter gallery data to include only those with filenames in desired_filenames
+    filtered_gallery_data = [item for item in gallery_data if item[0] in desired_filenames]
+
+    return render_template('gallery.html', gallery_data=filtered_gallery_data)
 
 if __name__ == '__main__':
     app.run(debug=True)
